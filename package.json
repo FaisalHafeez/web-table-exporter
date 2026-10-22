@@ -1,0 +1,28 @@
+{
+  "name": "web-table-exporter",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "A local-first Chrome extension to copy HTML tables to spreadsheets or export CSV, Markdown, and JSON.",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "test:unit": "node --test tests/*.test.js",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "wxt build --config wxt.test.config.ts --mode testing && playwright test",
+    "test:package": "bun run zip && node tests/package-smoke.mjs",
+    "test": "bun run test:unit && bun run typecheck && bun run build && bun run test:e2e && bun run test:package",
+    "postinstall": "wxt prepare"
+  },
+  "engines": {
+    "node": ">=22.18.0",
+    "bun": ">=1.2.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.56",
+    "@types/node": "^24",
+    "typescript": "^5.9",
+    "wxt": "0.21.4"
+  }
+}

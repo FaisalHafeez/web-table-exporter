@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Table Exporter</title>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <div class="identity">
+        <div class="mark" aria-hidden="true">▦</div>
+        <div><h1>Web Table Exporter</h1><p>Copy and export webpage tables</p></div>
+      </div>
+      <button id="scan" class="quiet" title="Scan current page again" type="button">↻ Scan</button>
+    </header>
+    <div id="status" class="status" role="status" aria-live="polite">Finding tables…</div>
+    <section id="workspace" hidden>
+      <label class="field" for="table-picker">SELECT A TABLE</label>
+      <select id="table-picker" aria-label="Choose a page table"></select>
+      <div class="table-info"><span id="size"></span><span id="warning" class="warning" hidden>Partially extracted</span></div>
+      <div id="preview" class="preview" aria-label="Table preview" tabindex="0"></div>
+      <div class="controls">
+        <div><label class="field" for="format-picker">EXPORT FORMAT</label>
+          <select id="format-picker">
+            <option value="tsv">TSV · Excel / Sheets</option>
+            <option value="csv">CSV</option>
+            <option value="markdown">Markdown</option>
+            <option value="json">JSON · array of arrays</option>
+          </select></div>
+      </div>
+      <label id="header-control" class="check"><input id="has-header" type="checkbox" checked> Use first row as Markdown header</label>
+      <div class="actions"><button id="copy" class="primary" type="button">Copy to clipboard</button><button id="download" class="secondary" type="button">Download</button></div>
+    </section>
+    <footer>On-demand access · local processing · no analytics</footer>
+  </main>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

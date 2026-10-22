@@ -1,0 +1,52 @@
+# Local internal planning, handoffs, and notes (never commit)
+# Keep the root public README, but ignore other Markdown documents.
+**/*.md
+!/README.md
+/docs/
+/internal/
+/planning/
+/notes/
+**/*.plan.md
+**/*.prompt.md
+**/*.scratch.md
+
+# AI coding agents and IDE-specific instructions
+**/AGENTS.md
+**/agents.md
+**/agent.md
+**/CLAUDE.md
+**/GEMINI.md
+**/COPILOT_INSTRUCTIONS.md
+**/.agents/
+**/.agent/
+**/.codex/
+**/.claude/
+**/.cursor/
+**/.continue/
+**/.windsurf/
+**/.aider*
+**/.cursorrules
+**/.clinerules
+**/.windsurfrules
+**/.github/copilot-instructions.md
+**/.github/agents/
+**/.github/instructions/
+**/.github/prompts/
+
+# Generated and local files
+node_modules/
+coverage/
+dist/
+.wxt/
+.output/
+test-results/
+playwright-report/
+playwright/.cache/
+*.zip
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# README.md, LICENSE, source code, and tests are intentionally public.

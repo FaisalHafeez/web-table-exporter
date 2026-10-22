@@ -1,0 +1,18 @@
+{
+  "extends": "./.wxt/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": true
+  },
+  "include": [
+    ".wxt/**/*.d.ts",
+    "entrypoints/**/*.ts",
+    "src/**/*.ts",
+    "tests/e2e/**/*.ts",
+    "wxt.config.ts",
+    "wxt.test.config.ts",
+    "playwright.config.ts"
+  ]
+}
